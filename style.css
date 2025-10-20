@@ -1,0 +1,957 @@
+/* Custom CSS for BeTuning Website - Matching Original Design */
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Navigation Styles */
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-square {
+  background-color: #dc3545;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 24px;
+  color: #333;
+}
+
+.navbar-nav .nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #dc3545 !important;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #dc3545;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.hero-content-col {
+  display: flex;
+  align-items: center;
+  padding: 100px 50px 50px 50px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.price-highlight {
+  color: #dc3545;
+}
+
+.hero-separator {
+  width: 60px;
+  height: 3px;
+  background-color: #333;
+  margin: 20px 0 30px 0;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.hero-visual-col {
+  position: relative;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-image {
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+  height: auto;
+}
+
+.car-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.red-shape {
+  position: absolute;
+  background-color: #dc3545;
+  opacity: 0.8;
+}
+
+.red-r {
+  width: 200px;
+  height: 200px;
+  top: 20%;
+  right: 10%;
+  border-radius: 10px;
+  transform: rotate(15deg);
+}
+
+.red-p {
+  width: 150px;
+  height: 150px;
+  top: 30%;
+  right: 15%;
+  border-radius: 50%;
+  transform: rotate(-10deg);
+}
+
+.red-b {
+  width: 180px;
+  height: 100px;
+  top: 25%;
+  right: 20%;
+  border-radius: 20px;
+  transform: rotate(25deg);
+}
+
+.red-c {
+  width: 120px;
+  height: 120px;
+  top: 35%;
+  right: 25%;
+  border-radius: 5px;
+  transform: rotate(-15deg);
+}
+
+.dotted-pattern {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 100px;
+  height: 2px;
+  background-image: radial-gradient(circle, #333 1px, transparent 1px);
+  background-size: 10px 10px;
+  transform: rotate(45deg);
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  bottom: 30px;
+  z-index: 10;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  background: transparent;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background: #dc3545;
+  border-color: #dc3545;
+}
+
+/* Floating Sidebar */
+.floating-sidebar {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar-box {
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 5px;
+  min-width: 80px;
+}
+
+.box-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.box-text {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.buy-now-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.buy-now-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Section Styles */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.separator {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.separator img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* About Section */
+.about-content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.3;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.about-image img {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Open Hours & Stats */
+.open-hours h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.open-hours p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.open-hours table {
+  font-size: 1rem;
+}
+
+.open-hours table td {
+  padding: 0.5rem 0;
+  border: none;
+  color: #333;
+}
+
+.stats-section {
+  padding: 2rem 0;
+}
+
+.stat-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  box-shadow: 0 10px 30px rgba(220, 53, 69, 0.3);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+.mechanic-image img {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Section */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(220, 53, 69, 0.9),
+    rgba(200, 35, 51, 0.9)
+  );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 2rem;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-overlay p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Counter Section */
+.counter-section {
+  margin-top: 4rem;
+}
+
+.counter-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 0;
+  border-radius: 15px;
+  position: relative;
+}
+
+.counter-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+}
+
+.counter-number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.counter-text {
+  font-size: 1.25rem;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+/* Contact Section */
+.contact-content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.phone-number {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #dc3545;
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a !important;
+}
+
+footer p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+footer .btn {
+  margin-top: 1rem;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #c82333, #a71e2a);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .floating-sidebar {
+    right: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-content-col {
+    padding: 80px 30px 30px 30px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .floating-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content-col {
+    padding: 60px 20px 20px 20px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .stat-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .counter-number {
+    font-size: 3rem;
+  }
+
+  .portfolio-item img {
+    height: 200px;
+  }
+
+  .contact-form {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .about-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .stat-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .counter-number {
+    font-size: 2.5rem;
+  }
+
+  .portfolio-item img {
+    height: 180px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .logo-square {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Open Hours & Stats Section */
+.open-hours-section {
+  background-color: #dc3545;
+  color: white;
+  padding: 4rem 3rem;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.be-logo-large {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.open-hours-content h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.open-hours-content p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.open-hours-content table {
+  color: white;
+}
+
+.open-hours-content table td {
+  padding: 0.5rem 0;
+  border: none;
+  color: white;
+}
+
+.stats-section-bg {
+  background-color: #f8f9fa;
+  padding: 4rem 2rem;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.mechanic-section {
+  padding: 0;
+  position: relative;
+}
+
+.mechanic-image {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.mechanic-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mechanic-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.overlay-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.overlay-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.overlay-text {
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.overlay-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.overlay-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Realizations Section */
+.realizations-content h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.realizations-counter {
+  position: relative;
+  height: 300px;
+}
+
+.counter-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+}
+
+.counter-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.counter-number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.counter-text {
+  font-size: 1.25rem;
+  color: #fff;
+  margin: 0;
+}
+
+/* Contact Section */
+.contact-image img {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design Updates */
+@media (max-width: 992px) {
+  .open-hours-section {
+    padding: 3rem 2rem;
+  }
+
+  .stats-section-bg {
+    padding: 3rem 1.5rem;
+  }
+
+  .mechanic-image {
+    height: 300px;
+  }
+
+  .realizations-content h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .open-hours-section {
+    padding: 2rem 1.5rem;
+    min-height: 300px;
+  }
+
+  .be-logo-large {
+    font-size: 3rem;
+  }
+
+  .stats-section-bg {
+    padding: 2rem 1rem;
+    min-height: 300px;
+  }
+
+  .mechanic-image {
+    height: 250px;
+  }
+
+  .realizations-content h3 {
+    font-size: 2rem;
+  }
+
+  .counter-number {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .open-hours-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .be-logo-large {
+    font-size: 2.5rem;
+  }
+
+  .stats-section-bg {
+    padding: 1.5rem 1rem;
+  }
+
+  .mechanic-image {
+    height: 200px;
+  }
+
+  .realizations-content h3 {
+    font-size: 1.75rem;
+  }
+
+  .counter-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-custom {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.border-gradient {
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #dc3545, #c82333) 1;
+}
