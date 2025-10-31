@@ -21,6 +21,10 @@ body {
   transition: all 0.3s ease;
 }
 
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -76,24 +80,24 @@ body {
 } */
 
 /* Hero Section */
-.hero-section {
+.section-hero {
   position: relative;
   min-height: 100vh;
   background-color: #f8f9fa;
   overflow: hidden;
 }
 
-.hero-content-col {
+.hero-text-col {
   display: flex;
   align-items: center;
   padding: 100px 50px 50px 50px;
 }
 
-.hero-content {
+.hero-text {
   max-width: 600px;
 }
 
-.hero-title {
+.hero-heading {
   font-size: 4rem;
   font-weight: 900;
   line-height: 1.1;
@@ -112,14 +116,14 @@ body {
   margin: 20px 0 30px 0;
 }
 
-.hero-description {
+.hero-text-desc {
   font-size: 1.1rem;
   color: #666;
   line-height: 1.6;
   max-width: 500px;
 }
 
-.hero-visual-col {
+.hero-image-col {
   position: relative;
   padding: 0;
   height: 100vh;
@@ -128,7 +132,7 @@ body {
   justify-content: center;
 }
 
-.hero-visual {
+.hero-image-box {
   position: relative;
   width: 100%;
   height: 100%;
@@ -137,20 +141,20 @@ body {
   justify-content: center;
 }
 
-.car-image {
+.car-img {
   position: relative;
   z-index: 2;
   max-width: 80%;
   height: auto;
 }
 
-.car-image img {
+.car-img img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.background-shapes {
+.bg-shapes {
   position: absolute;
   top: 0;
   left: 0;
@@ -201,7 +205,7 @@ body {
   transform: rotate(-15deg);
 }
 
-.dotted-pattern {
+.dotted {
   position: absolute;
   top: 30%;
   left: 20%;
@@ -212,25 +216,36 @@ body {
   transform: rotate(45deg);
 }
 
-/* Carousel Indicators */
 .carousel-indicators {
+  /* Keep this if you want the indicators at the bottom */
   bottom: 30px;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; /* Adjust spacing between buttons */
 }
 
 .carousel-indicators button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid #333;
-  background: transparent;
-  margin: 0 5px;
-  transition: all 0.3s ease;
+  width: 24px;
+  height: 60px;
+  /* slight rounding for sharp square, use 0 for pure square */
+  border: none;
+  background: #bfc2c7; /* neutral gray for inactive */
+  margin: 0;
+  opacity: 1;
+  transition: background 0.3s;
+  box-shadow: none; /* Remove borders/shadow for flat look */
 }
 
 .carousel-indicators .active {
-  background: #dc3545;
-  border-color: #dc3545;
+  background: #888b93; /* darker shade or brand color for active */
+  border: none;
+  opacity: 1;
+}
+
+.carousel-indicators button:focus {
+  outline: 2px solid #dc3545; /* add color for accessibility if wanted */
 }
 
 /* Floating Sidebar */
@@ -286,7 +301,7 @@ body {
 }
 
 /* Section Styles */
-.section-title {
+.section-heading {
   font-size: 2.5rem;
   font-weight: 700;
   color: #333;
@@ -304,20 +319,20 @@ body {
 }
 
 /* About Section */
-.about-content h3 {
+.about-text h3 {
   font-size: 2rem;
   font-weight: 600;
   color: #333;
   line-height: 1.3;
 }
 
-.about-content p {
+.about-text p {
   font-size: 1.1rem;
   color: #666;
   margin-bottom: 1.5rem;
 }
 
-.about-image img {
+.about-img img {
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -382,7 +397,7 @@ body {
 }
 
 /* Portfolio Section */
-.portfolio-item {
+.portfolio-card {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
@@ -390,23 +405,23 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-item:hover {
+.portfolio-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-.portfolio-item img {
+.portfolio-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.portfolio-item:hover img {
+.portfolio-card:hover img {
   transform: scale(1.1);
 }
 
-.portfolio-overlay {
+.portfolio-card-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -428,17 +443,17 @@ body {
   padding: 2rem;
 }
 
-.portfolio-item:hover .portfolio-overlay {
+.portfolio-card:hover .portfolio-card-overlay {
   opacity: 1;
 }
 
-.portfolio-overlay h5 {
+.portfolio-card-overlay h5 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-.portfolio-overlay p {
+.portfolio-card-overlay p {
   font-size: 1rem;
   margin: 0;
 }
@@ -448,7 +463,7 @@ body {
   margin-top: 4rem;
 }
 
-.counter-bg {
+.counter-bg-box {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -457,7 +472,7 @@ body {
   position: relative;
 }
 
-.counter-bg::before {
+.counter-bg-box::before {
   content: "";
   position: absolute;
   top: 0;
@@ -485,14 +500,14 @@ body {
 }
 
 /* Contact Section */
-.contact-content h3 {
+.contact-text h3 {
   font-size: 2rem;
   font-weight: 600;
   color: #333;
   margin-bottom: 1rem;
 }
 
-.phone-number {
+.phone-text {
   font-size: 1.5rem;
   font-weight: 600;
   color: #dc3545;
@@ -562,7 +577,7 @@ footer .btn {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .hero-title {
+  .hero-heading {
     font-size: 3.5rem;
   }
 
@@ -572,11 +587,11 @@ footer .btn {
 }
 
 @media (max-width: 992px) {
-  .hero-content-col {
+  .hero-text-col {
     padding: 80px 30px 30px 30px;
   }
 
-  .hero-title {
+  .hero-heading {
     font-size: 3rem;
   }
 
@@ -586,23 +601,23 @@ footer .btn {
 }
 
 @media (max-width: 768px) {
-  .hero-content-col {
+  .hero-text-col {
     padding: 60px 20px 20px 20px;
   }
 
-  .hero-title {
+  .hero-heading {
     font-size: 2.5rem;
   }
 
-  .hero-description {
+  .hero-text-desc {
     font-size: 1rem;
   }
 
-  .section-title {
+  .section-heading {
     font-size: 2rem;
   }
 
-  .about-content h3 {
+  .about-text h3 {
     font-size: 1.5rem;
   }
 
@@ -619,7 +634,7 @@ footer .btn {
     font-size: 3rem;
   }
 
-  .portfolio-item img {
+  .portfolio-card img {
     height: 200px;
   }
 
@@ -629,19 +644,19 @@ footer .btn {
 }
 
 @media (max-width: 576px) {
-  .hero-title {
+  .hero-heading {
     font-size: 2rem;
   }
 
-  .hero-description {
+  .hero-text-desc {
     font-size: 0.9rem;
   }
 
-  .section-title {
+  .section-heading {
     font-size: 1.75rem;
   }
 
-  .about-content h3 {
+  .about-text h3 {
     font-size: 1.25rem;
   }
 
@@ -658,7 +673,7 @@ footer .btn {
     font-size: 2.5rem;
   }
 
-  .portfolio-item img {
+  .portfolio-card img {
     height: 180px;
   }
 
@@ -691,7 +706,7 @@ html {
 }
 
 /* Open Hours & Stats Section */
-.open-hours-section {
+.hours-section {
   background-color: #dc3545;
   color: white;
   padding: 4rem 3rem;
@@ -700,7 +715,7 @@ html {
   align-items: center;
 }
 
-.be-logo-large {
+.be-logo-big {
   font-size: 4rem;
   font-weight: 900;
   color: white;
@@ -708,29 +723,29 @@ html {
   line-height: 1;
 }
 
-.open-hours-content h4 {
+.hours-content h4 {
   font-size: 1.5rem;
   font-weight: 600;
   color: white;
   margin-bottom: 1rem;
 }
 
-.open-hours-content p {
+.hours-content p {
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1.5rem;
 }
 
-.open-hours-content table {
+.hours-content table {
   color: white;
 }
 
-.open-hours-content table td {
+.hours-content table td {
   padding: 0.5rem 0;
   border: none;
   color: white;
 }
 
-.stats-section-bg {
+.stats-section-box {
   background-color: #f8f9fa;
   padding: 4rem 2rem;
   min-height: 400px;
@@ -738,18 +753,18 @@ html {
   align-items: center;
 }
 
-.mechanic-section {
+.mechanic-section-box {
   padding: 0;
   position: relative;
 }
 
-.mechanic-image {
+.mechanic-img {
   position: relative;
   height: 400px;
   overflow: hidden;
 }
 
-.mechanic-image img {
+.mechanic-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -803,7 +818,7 @@ html {
 }
 
 /* Realizations Section */
-.realizations-content h3 {
+.realizations-text h3 {
   font-size: 3rem;
   font-weight: 700;
   color: #333;
@@ -811,7 +826,7 @@ html {
   margin-bottom: 2rem;
 }
 
-.realizations-counter {
+.realizations-box {
   position: relative;
   height: 300px;
 }
@@ -839,7 +854,7 @@ html {
   border-radius: 15px;
 }
 
-.counter-content {
+.counter-text-box {
   position: relative;
   z-index: 2;
   text-align: center;
@@ -861,7 +876,7 @@ html {
 }
 
 /* Contact Section */
-.contact-image img {
+.contact-img img {
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
