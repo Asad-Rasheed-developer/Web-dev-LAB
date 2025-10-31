@@ -103,7 +103,6 @@ body {
   color: #6c757d;
 }
 
-/* Mobile spacing */
 @media (max-width: 767px) {
   .main-frame {
     padding: 24px 18px;
